@@ -1,0 +1,6 @@
+[submodule "Il2CppDumper"]
+	path = Il2CppDumper
+	url = https://github.com/Perfare/Il2CppDumper.git
+[submodule "frida-clr"]
+	path = frida-clr
+	url = https://github.com/frida/frida-clr.git
