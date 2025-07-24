@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BackToTheDawnTrainer" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainWindow_RestoreBounds" Type="System.Windows.Rect" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MainWindow_WindowState" Type="System.Windows.WindowState" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MainWindow_Splitter_UpRowHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MainWindow_Splitter_DownRowHeight" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GameFileLastWriteTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Dice1Value" Type="BackToTheDawnTrainer.DiceType" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Dice2Value" Type="BackToTheDawnTrainer.DiceType" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GambleValues" Type="BackToTheDawnTrainer.PokeCardConfig[]" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

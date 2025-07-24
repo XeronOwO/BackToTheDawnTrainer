@@ -1,0 +1,13 @@
+{
+  "$description": "Configuration for Il2CppDumper. DO NOT delete or modify this file.",
+  "DumpMethod": true,
+  "DumpField": false,
+  "DumpProperty": false,
+  "DumpAttribute": false,
+  "DumpFieldOffset": false,
+  "DumpTypeDefIndex": false,
+  "GenerateDummyDll": false,
+  "GenerateStruct": true,
+  "DummyDllAddToken": false,
+  "RequireAnyKey": false
+}

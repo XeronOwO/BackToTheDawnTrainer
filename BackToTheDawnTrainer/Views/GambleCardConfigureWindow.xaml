@@ -1,0 +1,155 @@
+﻿<Window x:Class="BackToTheDawnTrainer.Views.GambleCardConfigureWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:BackToTheDawnTrainer.Converters"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:e="clr-namespace:BackToTheDawnTrainer.Extensions"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        xmlns:local="clr-namespace:BackToTheDawnTrainer"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BackToTheDawnTrainer.ViewModels"
+        Title="GambleCardConfigureWindow"
+        Width="345"
+        Height="200"
+        d:DataContext="{d:DesignInstance Type=vm:GambleCardConfigureWindowViewModel}"
+        lex:LocalizeDictionary.DesignCulture="zh-CN"
+        lex:ResxLocalizationProvider.DefaultAssembly="BackToTheDawnTrainer"
+        lex:ResxLocalizationProvider.DefaultDictionary="Lang"
+        WindowStartupLocation="CenterOwner"
+        mc:Ignorable="d">
+    <Window.Resources>
+        <c:BoolConverter x:Key="BoolConverter" />
+    </Window.Resources>
+
+    <StackPanel Margin="10" Orientation="Vertical">
+        <CheckBox Margin="5,0,0,0"
+                  Content="{lex:Loc GambleCardConfigureWindow_CheckBoxLock_Content}"
+                  IsChecked="{Binding IsLocked}" />
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="♠   "
+                         GroupName="Suit"
+                         IsChecked="{Binding Suit, Converter={StaticResource BoolConverter}, ConverterParameter={x:Static local:PokeSuit.Spade}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="♥   "
+                         Foreground="Red"
+                         GroupName="Suit"
+                         IsChecked="{Binding Suit, Converter={StaticResource BoolConverter}, ConverterParameter={x:Static local:PokeSuit.Heart}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="♦   "
+                         Foreground="Red"
+                         GroupName="Suit"
+                         IsChecked="{Binding Suit, Converter={StaticResource BoolConverter}, ConverterParameter={x:Static local:PokeSuit.Diamond}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="♣   "
+                         GroupName="Suit"
+                         IsChecked="{Binding Suit, Converter={StaticResource BoolConverter}, ConverterParameter={x:Static local:PokeSuit.Club}}" />
+        </StackPanel>
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="A   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 1}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="2   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 2}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="3   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 3}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="4   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 4}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="5   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 5}}" />
+        </StackPanel>
+        <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="6   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 6}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="7   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 7}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="8   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 8}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="9   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 9}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="10  "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 10}}" />
+        </StackPanel>
+        <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="J   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 11}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="Q   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 12}}" />
+            <RadioButton MinWidth="60"
+                         Margin="5,0,0,0"
+                         VerticalContentAlignment="Center"
+                         Content="K   "
+                         GroupName="Rank"
+                         IsChecked="{Binding Rank, Converter={StaticResource BoolConverter}, ConverterParameter={e:Int32 13}}" />
+        </StackPanel>
+        <StackPanel Width="Auto"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button x:Name="_buttonConfirm"
+                    Padding="10,3"
+                    Click="ButtonConfirm_Click"
+                    Content="{lex:Loc GambleCardConfigureWindow_ButtonConfirm_Content}" />
+            <Button x:Name="_buttonCancel"
+                    Margin="20,0,0,0"
+                    Padding="10,3"
+                    Click="ButtonCancel_Click"
+                    Content="{lex:Loc GambleCardConfigureWindow_ButtonCancel_Content}" />
+        </StackPanel>
+    </StackPanel>
+</Window>

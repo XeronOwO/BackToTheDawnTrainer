@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="BackToTheDawnTrainer.Views.DiceValueView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c="clr-namespace:BackToTheDawnTrainer.Converters"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             xmlns:local="clr-namespace:BackToTheDawnTrainer"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:BackToTheDawnTrainer.ViewModels"
+             d:Background="White"
+             d:DataContext="{d:DesignInstance Type=vm:DiceValueViewModel}"
+             d:DesignHeight="50"
+             d:DesignWidth="500"
+             lex:LocalizeDictionary.DesignCulture="zh-CN"
+             lex:ResxLocalizationProvider.DefaultAssembly="BackToTheDawnTrainer"
+             lex:ResxLocalizationProvider.DefaultDictionary="Lang"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <c:BoolConverter x:Key="DiceValueConverter" />
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Horizontal">
+        <RadioButton MinWidth="60"
+                     VerticalContentAlignment="Center"
+                     Content="{lex:Loc MainWindow_TabDice_RadioButtonDice_Random}"
+                     GroupName="{Binding GroupName}"
+                     IsChecked="{Binding Value, Converter={StaticResource DiceValueConverter}, ConverterParameter={x:Static local:DiceType.Random}}" />
+        <RadioButton MinWidth="60"
+                     Margin="5,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Content="1"
+                     GroupName="{Binding GroupName}"
+                     IsChecked="{Binding Value, Converter={StaticResource DiceValueConverter}, ConverterParameter={x:Static local:DiceType.One}}" />
+        <RadioButton MinWidth="60"
+                     Margin="5,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Content="2"
+                     GroupName="{Binding GroupName}"
+                     IsChecked="{Binding Value, Converter={StaticResource DiceValueConverter}, ConverterParameter={x:Static local:DiceType.Two}}" />
+        <RadioButton MinWidth="60"
+                     Margin="5,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Content="3"
+                     GroupName="{Binding GroupName}"
+                     IsChecked="{Binding Value, Converter={StaticResource DiceValueConverter}, ConverterParameter={x:Static local:DiceType.Three}}" />
+        <RadioButton MinWidth="60"
+                     Margin="5,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Content="4"
+                     GroupName="{Binding GroupName}"
+                     IsChecked="{Binding Value, Converter={StaticResource DiceValueConverter}, ConverterParameter={x:Static local:DiceType.Four}}" />
+        <RadioButton MinWidth="60"
+                     Margin="5,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Content="5"
+                     GroupName="{Binding GroupName}"
+                     IsChecked="{Binding Value, Converter={StaticResource DiceValueConverter}, ConverterParameter={x:Static local:DiceType.Five}}" />
+        <RadioButton MinWidth="60"
+                     Margin="5,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Content="6"
+                     GroupName="{Binding GroupName}"
+                     IsChecked="{Binding Value, Converter={StaticResource DiceValueConverter}, ConverterParameter={x:Static local:DiceType.Six}}" />
+    </StackPanel>
+</UserControl>

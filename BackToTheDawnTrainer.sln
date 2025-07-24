@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Il2CppDumper", "Il2CppDumper\Il2CppDumper\Il2CppDumper.csproj", "{1B18EB51-0722-9F15-8AFC-E312E8D5EA82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackToTheDawnTrainer", "BackToTheDawnTrainer\BackToTheDawnTrainer.csproj", "{FF44881E-9EA0-4BE5-87FB-C072C3239B9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B18EB51-0722-9F15-8AFC-E312E8D5EA82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B18EB51-0722-9F15-8AFC-E312E8D5EA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B18EB51-0722-9F15-8AFC-E312E8D5EA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B18EB51-0722-9F15-8AFC-E312E8D5EA82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF44881E-9EA0-4BE5-87FB-C072C3239B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF44881E-9EA0-4BE5-87FB-C072C3239B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF44881E-9EA0-4BE5-87FB-C072C3239B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF44881E-9EA0-4BE5-87FB-C072C3239B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {045E0B1B-3C18-4BDC-9FE8-7B9FB1E1AC49}
+	EndGlobalSection
+EndGlobal

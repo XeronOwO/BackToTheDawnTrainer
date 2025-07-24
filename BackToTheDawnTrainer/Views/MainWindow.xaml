@@ -1,0 +1,105 @@
+﻿<Window x:Class="BackToTheDawnTrainer.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        xmlns:local="clr-namespace:BackToTheDawnTrainer"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BackToTheDawnTrainer.ViewModels"
+        Title="{lex:Loc MainWindow_Title}"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
+        lex:LocalizeDictionary.DesignCulture="zh-CN"
+        lex:ResxLocalizationProvider.DefaultAssembly="BackToTheDawnTrainer"
+        lex:ResxLocalizationProvider.DefaultDictionary="Lang"
+        Closing="MainWindow_Closing"
+        Initialized="MainWindow_Initialized"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid x:Name="_grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" MinHeight="100" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="*" MinHeight="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0"
+              Grid.Column="0"
+              Margin="10,10,10,1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button x:Name="_buttonEnable"
+                        MinWidth="60"
+                        Padding="10,3"
+                        Click="ButtonEnable_Click"
+                        Content="{lex:Loc MainWindow_ButtonEnable_Content}"
+                        IsEnabled="False" />
+                <Button x:Name="_buttonDisable"
+                        MinWidth="60"
+                        Margin="10,0,0,0"
+                        Padding="10,3"
+                        Click="ButtonDisable_Click"
+                        Content="{lex:Loc MainWindow_ButtonDisable_Content}"
+                        IsEnabled="False" />
+                <Label x:Name="_labelGameNotRunning"
+                       Margin="10,0,0,0"
+                       Content="{lex:Loc MainWindow_LabelGameNotRunning_Content}"
+                       Foreground="Red" />
+                <Label x:Name="_labelGameRunning"
+                       Margin="10,0,0,0"
+                       Content="{lex:Loc MainWindow_LabelGameRunning_Content}"
+                       Foreground="Green"
+                       Visibility="Collapsed" />
+            </StackPanel>
+
+            <TabControl x:Name="_tableControlCheating"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="0,5,0,0"
+                        IsEnabled="False">
+                <TabItem Header="{lex:Loc MainWindow_TabDice_Header}">
+                    <ContentControl x:Name="_contentControlDiceCheat" />
+                </TabItem>
+                <TabItem Header="{lex:Loc MainWindow_TabGamble_Header}">
+                    <ContentControl x:Name="_contentControlGambleCheat" />
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+        <GridSplitter Grid.Row="1"
+                      Grid.Column="0"
+                      HorizontalAlignment="Stretch"
+                      Background="Gray" />
+
+        <Grid Grid.Row="2"
+              Grid.Column="0"
+              Margin="10,1,10,10">
+            <RichTextBox Name="_richTextBoxLog"
+                         FontFamily="./../Fonts/MapleMono-CN-unhinted/#Maple Mono CN"
+                         HorizontalScrollBarVisibility="Auto"
+                         IsReadOnly="True"
+                         VerticalScrollBarVisibility="Auto">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Foreground="Green" Text="[INFO] Example" />
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Grid>
+    </Grid>
+</Window>
